@@ -13,7 +13,7 @@ while inotifywait -r -e modify,create,delete,move .; do
     git push
     echo "Changes pushed to GitHub."
     echo -n "Sleeping for 30 seconds..."
-    for i in {30..1}; do
+    for i in {0..1}; do
         echo -ne "\r$i seconds remaining..."
         sleep 1
     done

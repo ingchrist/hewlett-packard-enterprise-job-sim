@@ -12,11 +12,11 @@ while inotifywait -r -e modify,create,delete,move .; do
     git commit -m "in the mist of doing hard things by ingchrist: file/folder change detected"
     git push
     echo "Changes pushed to GitHub."
-    echo "Sleeping for 30 seconds..."
+    echo -n "Sleeping for 30 seconds..."
     for i in {30..1}; do
-        echo "$i seconds remaining..."
+        echo -ne "\r$i seconds remaining..."
         sleep 1
     done
-    echo "Slept for 30 seconds."
+    echo -e "\rSlept for 30 seconds.            "
     echo "Watching for changes again..."
 done

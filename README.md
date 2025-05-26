@@ -17,4 +17,3 @@ Step 6: Add a resource controller that supports an HTTP GET request at http://lo
 Step 7: Build an executable version of your application, and then launch the executable file.
 
 Step 8: Send an HTTP GET request to http://localhost:8080/employees to test that your application works as expected.
-

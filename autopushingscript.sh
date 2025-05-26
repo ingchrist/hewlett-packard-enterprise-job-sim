@@ -13,6 +13,6 @@ while inotifywait -r -e modify,create,delete,move .; do
     git push
     echo "Changes pushed to GitHub."
     echo "Sleeping for one minute..."
-    sleep 60
+    sleep 0
     echo "Watching for changes again..."
 done

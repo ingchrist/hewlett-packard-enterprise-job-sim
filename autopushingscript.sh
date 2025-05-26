@@ -20,3 +20,4 @@ while inotifywait -r -e modify,create,delete,move .; do
     echo -e "\rSlept for 30 seconds.            "
     echo "Watching for changes again..."
 done
+

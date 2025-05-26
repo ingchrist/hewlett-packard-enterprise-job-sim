@@ -12,4 +12,5 @@ while inotifywait -r -e modify,create,delete,move .; do
     git commit -m "in the mist of doing hard things by ingchrist: file/folder change detected"
     git push
     echo "Changes pushed to GitHub."
+    sleep 60
 done

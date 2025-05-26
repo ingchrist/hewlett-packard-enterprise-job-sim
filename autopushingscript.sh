@@ -9,7 +9,7 @@ echo "Watching $WATCH_DIR for changes..."
 
 while inotifywait -r -e modify,create,delete,move .; do
     git add .
-    git commit -m "in the mist of doing hard things by ingchrist: file/folder change detected"
+    git commit -m "in the mist of doing hard things by ingchrist: file/folder change "
     git push
     echo "Changes pushed to GitHub."
     echo -n "Sleeping for 30 seconds..."

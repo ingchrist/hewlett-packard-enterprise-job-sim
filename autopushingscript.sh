@@ -13,6 +13,9 @@ while inotifywait -r -e modify,create,delete,move .; do
     git push
     echo "Changes pushed to GitHub."
     echo "Sleeping for 30 seconds..."
+    start_time=$(date +%s)
     sleep 30
+    end_time=$(date +%s)
+    echo "Slept for $((end_time - start_time)) seconds."
     echo "Watching for changes again..."
 done

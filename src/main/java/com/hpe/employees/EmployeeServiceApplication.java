@@ -3,6 +3,7 @@ package com.hpe.employees;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,5 +14,6 @@ public class EmployeeServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(EmployeeServiceApplication.class, args);
         logger.info("Employee Service Application started successfully.");
+        System.setProperty(ConditionEvaluationReportLoggingListener.LOGGING_LEVEL, "DEBUG");
     }
 }

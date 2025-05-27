@@ -1,10 +1,21 @@
 package com.hpe.employees;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Employee {
+    @JsonProperty("employee_id")
     private int employeeId;
+
+    @JsonProperty("first_name")
     private String firstName;
+
+    @JsonProperty("last_name")
     private String lastName;
+
+    @JsonProperty("email")
     private String email;
+
+    @JsonProperty("title")
     private String title;
 
     // Default constructor

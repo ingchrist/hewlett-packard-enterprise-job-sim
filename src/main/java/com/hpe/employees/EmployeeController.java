@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.http.HttpStatus;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +35,10 @@ public class EmployeeController {
         try {
             employeeManager.getEmployees().getEmployeeList().add(newEmployee);
         } catch (Exception e) {
-            logger.error("Error occurred while adding a new employee: ", e);
-            throw e;
+            // Log detailed error message
+            logger.error("Error occurred while adding a new employee: {}", e.getMessage(), e);
+            // Throw a ResponseStatusException with a meaningful message and HTTP status code
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to add employee", e);
         }
     }
 }

@@ -21,6 +21,9 @@
         </dependency>
     </dependencies>
     <build>
+        <pluginGroups>
+            <pluginGroup>org.springframework.boot</pluginGroup>
+        </pluginGroups>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

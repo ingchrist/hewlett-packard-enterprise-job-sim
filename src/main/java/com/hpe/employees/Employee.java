@@ -36,4 +36,25 @@ public class Employee {
     public String getTitle() {
         return title;
     }
+
+    // Setters
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

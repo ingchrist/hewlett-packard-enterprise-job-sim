@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+
 @RestController
 public class EmployeeController {
     private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
@@ -20,6 +22,14 @@ public class EmployeeController {
 
     @PostMapping("/employees")
     public void addEmployee(@RequestBody Employee newEmployee) {
+        // Add debug log to verify incoming data
+        logger.debug("Received new employee data: {}", newEmployee);
+
+        // Ensure employeeList is initialized
+        if (employeeManager.getEmployees().getEmployeeList() == null) {
+            employeeManager.getEmployees().setEmployeeList(new ArrayList<>());
+        }
+
         try {
             employeeManager.getEmployees().getEmployeeList().add(newEmployee);
         } catch (Exception e) {

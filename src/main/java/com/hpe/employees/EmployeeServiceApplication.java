@@ -14,6 +14,6 @@ public class EmployeeServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(EmployeeServiceApplication.class, args);
         logger.info("Employee Service Application started successfully.");
-        System.setProperty(ConditionEvaluationReportLoggingListener.LOGGING_LEVEL, "DEBUG");
+        System.setProperty("logging.level", "DEBUG");
     }
 }

@@ -7,6 +7,10 @@ public class Employee {
     private String email;
     private String title;
 
+    // Default constructor
+    public Employee() {
+    }
+
     // Constructor
     public Employee(int employeeId, String firstName, String lastName, String email, String title) {
         this.employeeId = employeeId;
